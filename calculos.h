@@ -6,6 +6,9 @@ int seleccion(int, int);
 int setVarA();
 int setVarB();
 
+void calcularTodo();
+void mostrarTodo();
+
 int suma(int, int);
 int resta(int, int);
 float division(int, int);

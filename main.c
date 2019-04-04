@@ -10,8 +10,28 @@ int main()
 
     do
     {
-        seleccion(vara, varb);
-    /** AGREGAR SWITCH
+
+    switch(seleccion(vara, varb))
+    {
+    case 1:
+        vara = setVarA();
+        break;
+    case 2:
+        varb = setVarB();
+        break;
+    case 3:
+        calcularTodo();
+        break;
+    case 4:
+        mostrarTodo();
+        break;
+    case 5:
+        finish = 'y';
+        break;
+    default:
+        finish = 'n';
+        break;
+    }
     }while(finish == 'n');
 
 }

@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include "calculos.h"
 
+
+
 /*manejo de menu*/
 int seleccion(int a, int b)
 {
     system("cls");
-    int opcion;
-    printf("Seleccione la operacion:\n\n1.\tIngresar 1er operando (A = %d)\n2.\tIngresar 2do operando (B = %d)\n3.\tCalcular todas las operaciones.\n4.\tInformar todos los resultados\n5.\tFinalizar\nSeleccion: ")
+    int opcion = 0;
+    printf("Seleccione la operacion:\n\n1.\tIngresar 1er operando (A = %d)\n2.\tIngresar 2do operando (B = %d)\n3.\tCalcular todas las operaciones.\n4.\tInformar todos los resultados\n5.\tFinalizar\nSeleccion: ");
     scanf("%d", opcion);
     return opcion;
 }
@@ -24,7 +26,13 @@ int setVarA()
     return a;
 }
 
-/**AGREGAR SET VAR B
+int setVarB()
+{
+    int b;
+    printf("Ingrese el nuevo valor de el segundo operando: ");
+    scanf("%d", b);
+    return b;
+}
 
 /***************/
 /**operaciones**/
@@ -41,7 +49,12 @@ int resta(int a, int b)
 
 float division(int a, int b)
 {
-    return (float)a / b;
+    if (b== 0)
+        {
+            printf("Error: Division por cero\n");
+            return 0;
+        }
+    else{return (float)a / b;}
 }
 
 int multiplicacion(int a, int b)
