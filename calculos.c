@@ -84,7 +84,7 @@ float factorialA(float a)
     }
     else
     {
-        printf("Error: A es factorial negativo");
+        printf("Error: A es factorial negativo\n");
     }
     return factorA;
 }
@@ -104,7 +104,28 @@ float factorialB(float b)
     }
     else
     {
-        printf("Error: B es factorial negativo");
+        printf("Error: B es factorial negativo\n");
     }
     return factorB;
 }
+
+/*void calularTodo(float a, float b, float *s, float *r, float *d, float *m, float *fa, float *fb)
+{
+    *s = suma(a,b);
+    *r= resta(a,b);
+    *d= division(a,b);
+    *m= multiplicacion(a,b);
+    *fa= factorialA(a);
+    *fb= factorialB(b);
+}*/
+
+void mostrarTodo(float sumaFin, float restaFin, float divisionFin, float multiFin, float factAFin, float factBFin)
+{
+    printf("\nSuma: \t%f", sumaFin);
+    printf("\nResta: \t%f", restaFin);
+    printf("\nDivision: \t%f", divisionFin);
+    printf("\nMultiplicacion: \t%f", multiFin);
+    printf("\nFactorial de A: \t%f", factAFin);
+    printf("\nFactorial de B: \t%f \n", factBFin);
+}
+

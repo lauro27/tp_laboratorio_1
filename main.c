@@ -2,20 +2,18 @@
 #include <stdlib.h>
 #include "calculos.h"
 
-float sumaFin = 0;
-float restaFin = 0;
-float divisionFin = 0;
-float multiFin = 0;
-float factAFin = 0;
-float factBFin = 0;
-
-void calcularTodo(float a, float b);
-void mostrarTodo();
-
 int main()
 {
-    float vara = 0;
-    float varb = 0;
+    float vara = 0.0f;
+    float varb = 0.0f;
+
+    float sumaFin = 0;
+    float restaFin = 0;
+    float divisionFin = 0;
+    float multiFin = 0;
+    float factAFin = 0;
+    float factBFin = 0;
+
     char finish = 'n';
 
     do
@@ -31,11 +29,17 @@ int main()
         system("pause");
         break;
     case 3:
-        calcularTodo(vara, varb);
+        sumaFin = suma(vara,varb);
+    restaFin= resta(vara,varb);
+    divisionFin= division(vara,varb);
+    multiFin= multiplicacion(vara,varb);
+    factAFin= factorialA(vara);
+    factBFin= factorialB(varb);
+        //calcularTodo(vara, varb, sumaFin, restaFin, divisionFin, multiFin, factAFin, factBFin);
         system("pause");
         break;
     case 4:
-        mostrarTodo();
+        mostrarTodo(sumaFin, restaFin, divisionFin, multiFin, factAFin, factBFin);
         system("pause");
         break;
     case 5:
@@ -48,25 +52,6 @@ int main()
         break;
     }
     }while(finish == 'n');
-
+    return 0;
 }
 
-void calularTodo(float a, float b)
-{
-    sumaFin = suma(a,b);
-    restaFin = resta(a,b);
-    divisionFin = division(a,b);
-    multiFin = multiplicacion(a,b);
-    factAFin = factorialA(a);
-    factBFin = factorialB(b);
-}
-
-void mostrarTodo()
-{
-    printf("\nSuma: \t%f", sumaFin);
-    printf("\nResta: \t%f", restaFin);
-    printf("\nDivision: \t%f", divisionFin);
-    printf("\nMultiplicacion: \t%f", multiFin);
-    printf("\nFactorial de A: \t%f", factAFin);
-    printf("\nFactorial de B: \t%f \n", factBFin);
-}
