@@ -1,18 +1,16 @@
 #ifndef CALCULOS_H_INCLUDED
 #define CALCULOS_H_INCLUDED
 
-int seleccion(int, int);
+int seleccion(float, float);
 
-int setVarA();
-int setVarB();
+float setVarA();
+float setVarB();
 
-void calcularTodo();
-void mostrarTodo();
-
-int suma(int, int);
-int resta(int, int);
-float division(int, int);
-int multiplicacion(int, int);
-int factorial(int, int);
+float suma(float, float);
+float resta(float, float);
+float division(float, float);
+float multiplicacion(float, float);
+float factorialA(float);
+float factorialB(float);
 
 #endif // CALCULOS_H_INCLUDED

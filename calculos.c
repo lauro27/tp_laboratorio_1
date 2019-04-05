@@ -5,12 +5,13 @@
 
 
 /*manejo de menu*/
-int seleccion(int a, int b)
+int seleccion(float a, float b)
 {
     system("cls");
     int opcion = 0;
-    printf("Seleccione la operacion:\n\n1.\tIngresar 1er operando (A = %d)\n2.\tIngresar 2do operando (B = %d)\n3.\tCalcular todas las operaciones.\n4.\tInformar todos los resultados\n5.\tFinalizar\nSeleccion: ");
-    scanf("%d", opcion);
+    printf("Seleccione la operacion:\n\n1.\tIngresar 1er operando (A = %f)\n2.\tIngresar 2do operando (B = %f)\n3.\tCalcular todas las operaciones.\n4.\tInformar todos los resultados\n5.\tFinalizar\nSeleccion: ", a, b);
+    scanf("%d", &opcion);
+    fflush(stdin);
     return opcion;
 }
 
@@ -18,56 +19,63 @@ int seleccion(int a, int b)
 /**manejo de variables**/
 /***********************/
 
-int setVarA()
+float setVarA()
 {
-    int a;
+    float a;
     printf("Ingrese el nuevo valor de el primer operando: ");
-    scanf("%d", a);
+    scanf("%f", &a);
+    fflush(stdin);
     return a;
 }
 
-int setVarB()
+float setVarB()
 {
-    int b;
+    float b;
     printf("Ingrese el nuevo valor de el segundo operando: ");
-    scanf("%d", b);
+    scanf("%f", &b);
+    fflush(stdin);
     return b;
 }
+
 
 /***************/
 /**operaciones**/
 /***************/
-int suma(int a, int b)
+float suma(float a, float b)
 {
     return a + b;
 }
 
-int resta(int a, int b)
+float resta(float a, float b)
 {
     return a - b;
 }
 
-float division(int a, int b)
+float division(float a, float b)
 {
     if (b== 0)
-        {
-            printf("Error: Division por cero\n");
-            return 0;
-        }
-    else{return (float)a / b;}
+    {
+        printf("Error: Division por cero\n");
+        return 0;
+    }
+    else
+    {
+        return (float)a / b;
+    }
 }
 
-int multiplicacion(int a, int b)
+float multiplicacion(float a, float b)
 {
     return a * b;
 }
 
-int factorial(int a, int b)
+float factorialA(float a)
 {
-    int i;
-    int factorA;
-    int factorB;
-    if (a>0)
+    a = (int) a;
+    float i;
+    float factorA = 0;
+
+    if (a>=0)
     {
         for (i = a; i>0; i--)
         {
@@ -76,11 +84,27 @@ int factorial(int a, int b)
     }
     else
     {
-        //lidiar con factorial negativo?
+        printf("Error: A es factorial negativo");
     }
+    return factorA;
+}
+
+float factorialB(float b)
+{
+    b = (int) b;
+    float i;
+    float factorB = 0;
+
+    if (b>=0)
+    {
         for (i = b; i>0; i--)
         {
             factorB += i;
         }
-        return factorA, factorB;
+    }
+    else
+    {
+        printf("Error: B es factorial negativo");
+    }
+    return factorB;
 }
