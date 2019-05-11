@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1557533186 source:c:\users\casa\documents\juan\tp laboratorio 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"employee.h"
+
+1557533165 c:\users\casa\documents\juan\tp laboratorio 2\employee.h
+
+1557534755 source:c:\users\casa\documents\juan\tp laboratorio 2\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"employee.h"
+
